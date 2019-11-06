@@ -128,7 +128,7 @@ class BlendStatCtrl extends MetricsPanelCtrl {
   }
 
   onInitEditMode() {
-    this.fontSizes = ['20%', '30%', '50%', '70%', '80%', '100%', '110%', '120%', '150%', '170%', '200%'];
+    this.fontSizes = ['20%', '30%', '50%', '70%', '80%', '100%', '110%', '120%', '150%', '170%', '200%', '400%', '600%'];
     this.addEditorTab('Options', 'public/plugins/farski-blendstat-panel/editor.html', 2);
     this.addEditorTab('Value Mappings', 'public/plugins/farski-blendstat-panel/mappings.html', 3);
     this.addEditorTab('Blending', 'public/plugins/farski-blendstat-panel/blending.html', 4);
