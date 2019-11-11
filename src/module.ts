@@ -38,6 +38,8 @@ import config from 'app/core/config';
 import TimeSeries from 'app/core/time_series2';
 import { MetricsPanelCtrl } from 'app/plugins/sdk';
 
+const BASE_FONT_SIZE = 38;
+
 class BlendStatCtrl extends MetricsPanelCtrl {
   static templateUrl = 'module.html';
 
@@ -501,7 +503,8 @@ class BlendStatCtrl extends MetricsPanelCtrl {
     function getSpan(className, fontSize, applyColoring, value) {
       value = $sanitize(templateSrv.replace(value, data.scopedVars));
       value = applyColoring ? applyColoringThresholds(value) : value;
-      return '<span class="' + className + '" style="font-size:' + fontSize + '">' + value + '</span>';
+      const pixelSize = (parseInt(fontSize, 10) / 100) * BASE_FONT_SIZE;
+      return '<span class="' + className + '" style="font-size:' + pixelSize + 'px">' + value + '</span>';
     }
 
     function getBigValueHtml() {
